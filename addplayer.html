@@ -1,0 +1,58 @@
+<link href="./assets/css/addplayer.css" rel="stylesheet">
+  <nav class="topnav"> 
+    
+    <a class="label">BOM Admin Panel</a>
+    <a href="addplayer.html" class="btn btn-primary" role="button" routerLinkActive="active">Add</a>
+    <a href="index.html" class="btn btn-primary" role="button" routerLinkActive="active">Players</a>
+    <a href="infield.html" class="btn btn-primary" role="button" routerLinkActive="active">Points</a>
+    &nbsp;
+    <a href="bowling.html" class="btn btn-primary" role="button" routerLinkActive="active">Balls</a>
+  </nav>
+<br><br><br>
+
+
+
+   <div class="content">
+
+    <div class="add"> 
+        <div class="card">
+        <!-- <h3>Create Player</h3> -->
+        <h1 class="title">Create Player</h1>
+        <br>
+        <div [hidden]="submitted" style="width: 300px;">
+          <form (ngSubmit)="onSubmit()">
+            <div class="form-group">
+              <label for="name">Name</label><br>
+              <input type="text" class="form-control" id="name" required [(ngModel)]="player.name" name="name">
+            </div>
+            <br>
+            <div class="form-group">
+              <label for="school">School</label><br>
+              <div class="select">
+              <select type="text" class="form-control" id="school"name="school" [(ngModel)]="player.school">
+                  <option value="Ananda">Ananda</option>
+                  <option value="Nalanda">Nalanda</option>
+              </select>
+            </div>
+            </div>
+            <br>
+         
+            <button type="submit" class="btn success">SUBMIT</button>
+          </form>
+        </div>
+        </div>
+        
+        <div [hidden]="!submitted">
+            <div class="card added">
+          <h1 class="title">You have submitted successfully!</h1>
+          <button class="btn success" (click)="newPlayer()">Add</button>
+        </div>
+        </div>
+        </div>
+
+</div>
+
+
+
+
+</div>

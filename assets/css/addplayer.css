@@ -1,0 +1,199 @@
+  
+  a {
+    float: left;
+  display: block;
+  padding: 8px;
+  font-family: Impact, Charcoal, sans-serif; 
+
+}
+
+.topnav {
+  background-color: #2D3E4E;
+  overflow: hidden;
+  width: auto;
+  margin-bottom: -80px;
+  margin-left: -10px !important;
+  margin-top: 0px;
+  height: 49px;
+
+}
+
+/* Style the links inside the navigation bar */
+.topnav a {
+  float: left;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+/* Change the color of links on hover */
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+/* Add a color to the active/current link */
+.topnav a.active {
+  background-color: #2B3946;
+  color: white;
+}
+
+.label{
+  font-family: Impact, Charcoal, sans-serif; 
+  font-weight: 600;
+  margin: 0 0 12px;
+  color: #fff;
+  font-size: 17px;
+  -webkit-transition: 0.5s ease;
+  transition: 0.5s ease;
+}
+
+@keyframes colorchange {
+  0% {color: black;}
+  25% {color: rgb(100, 96, 96);}
+  50% {color: rgb(241, 241, 241);}
+  100% {color: rgb(0, 0, 0);}
+}
+
+
+.btn {
+    border: none;
+    background-color: inherit;
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+    display: inline-block;
+    font-weight: 400;
+  }
+  
+  /* On mouse-over */
+  .btn:hover {background: #eee;}
+  
+  .success {color: #2D3E4E;}
+  .info {color: dodgerblue;}
+  .warning {color: orange;}
+  .danger {color: red;}
+  .default {color: black;}
+ 
+ 
+     input {
+       width: 100%;
+     }
+     
+     /* select{
+        width: 318px;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        -ms-appearance: none;
+        appearance: none;
+        outline: 0;
+        box-shadow: none;
+        border: 0 !important;
+        background: #2c3e50;
+        background-image: none;
+     } */
+ 
+ 
+     .add{
+        margin-left:50px;
+     }
+ 
+     h3{
+       font-family: Arial, Helvetica, sans-serif;
+       font-size: 29px;
+       letter-spacing: 2px;
+       word-spacing: 2px;
+       color: #2D3E4E;
+       font-weight: 700;
+       text-decoration: none;
+       font-style: normal;
+       font-variant: small-caps;
+       text-transform: none;
+       margin-left: -50px;
+     }
+ 
+     .hr1{
+        background-color:  #2B3946;
+        width: 10000px;
+        height: 45px;
+        margin-top: -70px;
+        margin-left: -70px;
+     }
+ 
+     label{
+       font-family: Impact, Charcoal, sans-serif; 
+       font-weight: 300;
+       margin: 0 0 12px;
+       color: #2D3E4E;
+       font-size: 24px;
+       -webkit-transition: 0.5s ease;
+       transition: 0.5s ease;
+     }
+ 
+     .card {
+       background: #FFFFFF;
+       max-width: 400px;
+       margin: 100px auto;
+       border-radius: 12px;
+       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+       box-sizing: border-box;
+       padding: 48px;
+       text-align: center;
+     }
+ 
+     .added{
+       margin-top:-50px !important;
+     }
+ 
+     .title {
+       font-family: Impact, Charcoal, sans-serif; 
+       font-weight: 400;
+       margin: 0 0 12px;
+       color: #2D3E4E;
+       font-size: 24px;
+       -webkit-transition: 0.5s ease;
+       transition: 0.5s ease;
+     }
+ 
+     select::-ms-expand {
+       display: none;
+     }
+     /* Custom Select */
+     .select {
+       position: relative;
+       display: flex;
+       width: 318px;
+       height: 3em;
+       line-height: 3;
+       background: #2c3e50;
+       overflow: hidden;
+       border-radius: .25em;
+     }
+     select {
+       flex: 1;
+       padding: 0 .5em;
+       color: rgb(0, 0, 0);
+       cursor: pointer;
+     }
+     /* Arrow */
+     .select::after {
+       content: '\25BC';
+       position: absolute;
+       top: 0;
+       right: 0;
+       padding: 0 1em;
+       background: #34495e;
+       cursor: pointer;
+       pointer-events: none;
+       -webkit-transition: .25s all ease;
+       -o-transition: .25s all ease;
+       transition: .25s all ease;
+     }
+     /* Transition */
+     .select:hover::after {
+       color: #08889e;
+     }
+
+

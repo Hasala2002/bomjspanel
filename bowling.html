@@ -1,0 +1,61 @@
+<link href="./assets/css/bowling.css" rel="stylesheet">
+  
+<nav class="topnav"> 
+    
+  <a class="label">BOM Admin Panel</a>
+  <a href="addplayer.html" class="btn btn-primary" role="button" routerLinkActive="active">Add</a>
+  <a href="index.html" class="btn btn-primary" role="button" routerLinkActive="active">Players</a>
+  <a href="infield.html" class="btn btn-primary" role="button" routerLinkActive="active">Points</a>
+  &nbsp;
+  <a href="bowling.html" class="btn btn-primary" role="button" routerLinkActive="active">Balls</a>
+</nav>
+
+<div *ngIf="player">
+    <div *ngIf="player.inbowl">
+            <div class="card">   
+<div>
+    <div class ="label1">Name: </div>
+    <b *ngIf='player.now'>*</b>
+    <br>
+    <div class ="label1">Runs: </div> 
+        <div class ="label1">Extras: </div>
+    <div class ="label1">Wickets: </div> 
+</div>
+<button type="button" class="btn success" (click)="addRuns(1)">+1</button>
+<button type="button" class="btn success" (click)="addRuns(2)">+2</button>
+<button type="button" class="btn success" (click)="addRuns(4)">+4</button>
+<button type="button" class="btn success" (click)="addRuns(6)">+6</button>
+<br/>
+<button type="button" class="btn danger" (click)="addRuns(-1)">-1</button>
+<button type="button" class="btn danger" (click)="addRuns(-2)">-2</button>
+<button type="button" class="btn danger" (click)="addRuns(-4)">-4</button>
+<button type="button" class="btn danger" (click)="addRuns(-6)">-6</button>
+<br>
+<button type="button" class="btnsmall success" (click)="addExtra(+1)">+Wide</button>
+<button type="button" class="btnsmall danger" (click)="addExtra(-1)">-Wide</button>
+<button type="button" class="btnsmall success" (click)="addExtra(+1)">+Noball</button>
+<button type="button" class="btnsmall danger" (click)="addExtra(-1)">-Noball</button>
+<br>
+<button type="button" class="btnsmall success" (click)="addWickets(+1)">+Wicket</button>
+<button type="button" class="btnsmall danger" (click)="addWickets(-1)">-Wicket</button>
+<br>
+<button type="button" class="btnsmall success" (click)="addBalls(+1)">+Ball</button>
+<button type="button" class="btnsmall danger" (click)="addBalls(-1)">-Ball</button>
+<button type="button" class="btnsmall success" (click)="addMaiden(+1)">+Maiden</button>
+<button type="button" class="btnsmall danger" (click)="addMaiden(-1)">-Maiden</button>
+<div>
+    <label>Active: </label> 
+</div>
+
+    <br>
+
+<br>
+
+<span class="btn default" *ngIf='player.inbowl' (click)='updatebowlIn(false)'>Bowling</span>
+    
+<span class="btn default" *ngIf='!player.inbowl' (click)='updatebowlIn(true)'>Not Bowling</span>
+
+<hr />
+</div>
+</div>
+</div>

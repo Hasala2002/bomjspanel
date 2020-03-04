@@ -1,0 +1,45 @@
+<link href="./assets/css/index.css" rel="stylesheet">
+  
+<nav class="topnav"> 
+    
+  <a class="label">BOM Admin Panel</a>
+  <a href="addplayer.html" class="btn btn-primary" role="button" routerLinkActive="active">Add</a>
+  <a href="index.html" class="btn btn-primary" role="button" routerLinkActive="active">Players</a>
+  <a href="infield.html" class="btn btn-primary" role="button" routerLinkActive="active">Points</a>
+  &nbsp;
+  <a href="bowling.html" class="btn btn-primary" role="button" routerLinkActive="active">Balls</a>
+</nav>
+<div class="card">
+<div>
+    <label>First Name: </label> 
+  </div>
+  <div>
+    <label>School: </label> 
+  </div>
+  <div>
+    <label>Active: </label> 
+  </div>
+  <div>
+    <label>Out: </label> 
+  </div>
+  <div>
+    <label>Bowling: </label> 
+  </div>
+  <br>
+  <span class="btn danger" *ngIf='player.in' (click)='updateIn(false)'>Inactivate</span>
+ 
+  <span class="btn success" *ngIf='!player.in' (click)='updateIn(true)'>Activate</span>
+  
+  <br>
+  <span class="btn success" *ngIf='player.inbowl' (click)='updatebowlIn(false)'>Bowling</span>
+ 
+  <span class="btn danger" *ngIf='!player.inbowl' (click)='updatebowlIn(true)'>Not-Bowling</span>
+
+  <br>
+  <span class="btn danger" (click)='deletePlayer()'>Delete</span>
+  
+  <hr>
+  <hr>
+  <br>
+  </div>
+</div>

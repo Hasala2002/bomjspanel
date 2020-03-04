@@ -1,0 +1,62 @@
+<!-- <link href="addplayer.css" rel="stylesheet"> -->
+<link href="./assets/css/infield.css" rel="stylesheet">
+  
+<nav class="topnav"> 
+    
+  <a class="label">BOM Admin Panel</a>
+  <a href="addplayer.html" class="btn btn-primary" role="button" routerLinkActive="active">Add</a>
+  <a href="index.html" class="btn btn-primary" role="button" routerLinkActive="active">Players</a>
+  <a href="infield.html" class="btn btn-primary" role="button" routerLinkActive="active">Points</a>
+  &nbsp;
+  <a href="bowling.html" class="btn btn-primary" role="button" routerLinkActive="active">Balls</a>
+</nav>
+
+<br><br><br>
+
+
+
+   <div class="content">
+
+    <div class="card">         
+        <div>
+            <label>Name: </label>
+             <s *ngIf='player.out'></s>
+             <b *ngIf='!player.out'></b>
+            <b *ngIf='player.now'></b>
+            <br>
+            <label>Points: </label> 
+        </div>
+        <button type="button" class="btn success" (click)="addPoints(1)">+1</button>
+        <button type="button" class="btn success" (click)="addPoints(2)">+2</button>
+        <button type="button" class="btn success" (click)="addPoints(4)">+4</button>
+        <button type="button" class="btn success" (click)="addPoints(6)">+6</button>
+        <br/>
+        <button type="button" class="btn danger" (click)="addPoints(-1)">-1</button>
+        <button type="button" class="btn danger" (click)="addPoints(-2)">-2</button>
+        <button type="button" class="btn danger" (click)="addPoints(-4)">-4</button>
+        <button type="button" class="btn danger" (click)="addPoints(-6)">-6</button>
+        <div>
+            <label>Active: </label> 
+        </div>
+        
+            <br>
+        <span class="btn success" *ngIf='player.now' (click)='updateNow(false)'>Now bat</span>
+            
+        <span class="btn danger" *ngIf='!player.now' (click)='updateNow(true)'>Other side</span>
+        
+        <br>
+        
+        <span class="btn danger" *ngIf='player.out' (click)='outNow(false)'>Out</span>
+            
+        <span class="btn success" *ngIf='!player.out' (click)='outNow(true)'>Not out</span>
+        
+        <hr />
+        
+            </div>
+
+</div>
+
+
+
+
+</div>
